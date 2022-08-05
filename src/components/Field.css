@@ -6,3 +6,8 @@
 	width: 5em;
 	text-align: center;
 }
+
+.field__checkbox input {
+	width: 1.5em;
+	height: 1.5em;
+}
