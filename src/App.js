@@ -41,7 +41,7 @@ function App() {
 
     reader.onerror = (e) => {
       const error = e.target.error
-      console.error(`Error occurred while reading ${file.name}`, error)
+      setErrorMessages([`Error occurred while reading ${file.name}`, error])
     }
     reader.readAsText(file);
     evt.target.value = null; // clear file input field value so if user chooses same file again, handleFileChange will be called again
