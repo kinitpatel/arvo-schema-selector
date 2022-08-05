@@ -15,8 +15,8 @@ const Field = ({ name, scope }) => {
 		<Panel.Block>
 			<Panel.Icon></Panel.Icon>
 			<span className="field__title">{name}</span>
-			<span className="field__checkbox"><Form.Checkbox className="field__checkbox_input" checked={isMasked} onChange={() => dispatch(toggleMaskedField(key))} /></span>
-			<span className="field__checkbox"><Form.Checkbox className="field__checkbox_input" type="checkbox" checked={isEncrypted} onChange={() => dispatch(toggleEncryptedField(key))} /></span>
+			<span className="field__checkbox"><Form.Checkbox checked={isMasked} onChange={() => dispatch(toggleMaskedField(key))} /></span>
+			<span className="field__checkbox"><Form.Checkbox checked={isEncrypted} onChange={() => dispatch(toggleEncryptedField(key))} /></span>
 		</Panel.Block>
 	)
 }
