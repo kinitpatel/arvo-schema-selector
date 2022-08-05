@@ -1,0 +1,142 @@
+{
+  "fields": [
+    {
+      "name": "date",
+      "type": "string"
+    },
+    {
+      "name": "timestamp",
+      "type": "long"
+    },
+    {
+      "name": "id",
+      "type": "string"
+    },
+    {
+      "default": null,
+      "name": "type",
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    {
+      "name": "actor",
+      "type": {
+        "fields": [
+          {
+            "default": null,
+            "name": "id",
+            "type": [
+              "null",
+              "int"
+            ]
+          },
+          {
+            "default": null,
+            "name": "login",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          {
+            "default": null,
+            "name": "gravatar_id",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          {
+            "default": null,
+            "name": "url",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          {
+            "default": null,
+            "name": "avatar_url",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          {
+            "default": null,
+            "name": "display_login",
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        ],
+        "name": "actor",
+        "type": "record"
+      }
+    },
+    {
+      "name": "repo",
+      "type": {
+        "fields": [
+          {
+            "default": null,
+            "name": "id",
+            "type": [
+              "null",
+              "int"
+            ]
+          },
+          {
+            "default": null,
+            "name": "name",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          {
+            "default": null,
+            "name": "url",
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        ],
+        "name": "repo",
+        "type": "record"
+      }
+    },
+    {
+      "default": null,
+      "name": "payload",
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    {
+      "default": null,
+      "name": "org",
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    {
+      "name": "created_at",
+      "type": "long"
+    },
+    {
+      "name": "public",
+      "type": "boolean"
+    }
+  ],
+  "name": "GhArchive",
+  "namespace": "com.acme.avro",
+  "type": "record"
+}
+

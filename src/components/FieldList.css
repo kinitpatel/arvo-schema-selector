@@ -1,0 +1,10 @@
+.field-list__title {
+	width: 20em;
+	font-weight: bold;
+}
+
+.field-list__checkbox {
+	width: 5em;
+	text-align: center;
+	font-weight: bold;
+}
