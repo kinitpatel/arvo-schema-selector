@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { Section, Container, Form, Heading, Block, Button } from 'react-bulma-components';
 import Record from './components/Record';
 import MaskedFields from './components/MaskedFields';
 import EncryptedFields from './components/EncryptedFields';
 import validateArvoSchema from './utils/validateArvoSchema';
 import ErrorMessages from './components/ErrorMessages';
+import { clearSelectedFields } from './redux/actions';
 
 function App() {
   const [arvoSchemaDefinition, setArvoSchemaDefinition] = useState();
   const [errorMessages, setErrorMessages] = useState([])
+  const dispatch = useDispatch();
 
   const handleFileChange = (evt) => {
     const file = evt.target.files[0];
@@ -32,6 +35,7 @@ function App() {
       }
      
       setErrorMessages([]);
+      dispatch(clearSelectedFields())
       setArvoSchemaDefinition(parsedInputSchema);
     }
 

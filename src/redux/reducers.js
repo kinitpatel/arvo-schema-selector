@@ -1,4 +1,4 @@
-import { TOGGLE_MASKED_FIELD, TOGGLE_ENCRYPTED_FIELD } from './actions';
+import { TOGGLE_MASKED_FIELD, TOGGLE_ENCRYPTED_FIELD, CLEAR_SELECTED_FIELDS } from './actions';
 
 const initialState = {
   maskedFields: {}, // Object where keys represent masked fields
@@ -12,6 +12,9 @@ function rootReducer(state = initialState, action) {
 	const maskedFields = {...state.maskedFields};
 
   switch (type) {
+    case CLEAR_SELECTED_FIELDS: 
+      return initialState
+
     case TOGGLE_MASKED_FIELD:
       // Clear field from encryptedFields when we toggle its value in maskedFields
       // field cannot be both masked and encrypted
